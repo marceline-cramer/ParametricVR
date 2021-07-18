@@ -7,23 +7,29 @@ include <Chassis.scad>;
 include <FaceDummy.scad>;
 include <FacePlate.scad>;
 
+show_dummy = false;
 plate_width = 135;
 plate_height = 70;
+interior_depth = 80;
+exterior_depth = 40;
 ipd = 64;
-eye_offset = 25;
+lens_diameter = 45;
+lens_distance = 25;
 
-color([0.4, 0.4, 1.0])
-translate([-eye_offset,0,0])
-FaceDummy(ipd);
+if (show_dummy) {
+  color([0.4, 0.4, 1.0])
+  translate([-lens_distance,0,0])
+  FaceDummy(ipd);
+}
 
 color([0.4, 1, 0.4])
 difference() {
-  translate([50,0,0])
-  Chassis(plate_width=plate_width, plate_height=plate_height);
+  translate([interior_depth,0,0])
+  Chassis(plate_width, plate_height, interior_depth + exterior_depth + lens_distance);
 
-  translate([-eye_offset,0,0])
+  translate([-lens_distance,0,0])
   Head();
 }
 
 color([1.0, 0.4, 0.4])
-FacePlate(width=plate_width, height=plate_height, lens_diameter=45, ipd=ipd);
+FacePlate(plate_width, plate_height, lens_diameter, ipd);
