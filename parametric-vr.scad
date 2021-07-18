@@ -7,10 +7,10 @@ module eye() {
 
   hull() {
 	  translate([0, -eye_width2, 0])
-		  sphere(nan);
+		  sphere(0.1);
 
 		translate([0, eye_width2, 0])
-		  sphere(nan);
+		  sphere(0.1);
 
 		sphere(d=eye_width * 0.6);
 	}
