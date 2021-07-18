@@ -17,8 +17,13 @@ translate([-eye_offset,0,0])
 FaceDummy(ipd);
 
 color([0.4, 1, 0.4])
-translate([50,0,0])
-Chassis(plate_width=plate_width, plate_height=plate_height);
+difference() {
+  translate([50,0,0])
+  Chassis(plate_width=plate_width, plate_height=plate_height);
+
+  translate([-eye_offset,0,0])
+  Head();
+}
 
 color([1.0, 0.4, 0.4])
 FacePlate(width=plate_width, height=plate_height, lens_diameter=45, ipd=ipd);

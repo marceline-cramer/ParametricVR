@@ -30,7 +30,7 @@ module ChassisInterior(width, height, depth) {
 module Chassis(
     plate_width,
     plate_height,
-		side_depth=60,
+		side_depth=90,
 	  shell_thickness=5,
 	  bulge_depth=30) {
 	case_width = plate_width + shell_thickness * 2;
