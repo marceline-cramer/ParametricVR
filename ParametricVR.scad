@@ -1,3 +1,8 @@
+/** @file ParametricVR.scad
+ * @copyright Copyright (c) 2021 Marceline Cramer
+ * SPDX-License-Identifier: MIT
+ */
+
 include <Chassis.scad>;
 include <FaceDummy.scad>;
 include <FacePlate.scad>;

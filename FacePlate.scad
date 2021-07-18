@@ -1,3 +1,8 @@
+/** @file FacePlate.scad
+ * @copyright Copyright (c) 2021 Marceline Cramer
+ * SPDX-License-Identifier: MIT
+ */
+
 module FacePlateBase(width, height) {
   thickness = 3;
   translate([0, -width/2, -height/2])

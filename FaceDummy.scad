@@ -1,3 +1,8 @@
+/** @file FaceDummy.scad
+ * @copyright Copyright (c) 2021 Marceline Cramer
+ * SPDX-License-Identifier: MIT
+ */
+
 module Eye(eye_width=24) {
 	smooth_amount = 3.0;
 
